@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signature Plumbing & Heating</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/js/tailwindConfig.js"></script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+            .ribbon-clip::before {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                left: -20px;
+                border-width: 40px 20px 40px 0;
+                border-color: transparent #a52a2a transparent transparent;
+            }
+            .ribbon-clip::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                right: -20px;
+                border-width: 40px 0 40px 20px;
+                border-color: transparent transparent transparent #a52a2a;
+            }
+            .rotate-15 {
+                transform: rotate(-15deg);
+            }
+            .rotate-12 {
+                transform: rotate(12deg);
+            }
+            .rotate-8 {
+                transform: rotate(-8deg);
+            }
+            .text-outline {
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            }
+        }
+
+        
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.logo-item {
+  transition: all 0.3s ease;
+}
+
+.logo-item:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+}
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.1);
+        }
+        .card-image {
+            height: 180px;
+            object-fit: cover;
+        }
+
+</style>
+</head>
+
+<body class="font-sans bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen md:p-5">
+  <div class="max-w-6xl mx-auto bg-gray-50 rounded-3xl overflow-hidden shadow-xl relative">
+    <!-- Header -->
+    <header class="flex justify-between items-center p-5 md:p-8 bg-gray-50">
+      <div class="logo flex items-center">
+        <div class="w-10 h-10 bg-primary rounded-lg mr-3 flex items-center justify-center text-white font-bold">S</div>
+        <div>
+          <div class="font-bold">Signature</div>
+          <div class="text-sm">Plumbing & Heating</div>
+        </div>
+      </div>
+      <nav class="hidden md:flex gap-6 text-sm font-medium text-gray-800">
+        <span class="hover:text-primary cursor-pointer transition-colors">PLUMBING</span>
+        <span class="hover:text-primary cursor-pointer transition-colors">WATER</span>
+        <span class="hover:text-primary cursor-pointer transition-colors">HEATING</span>
+        <span class="hover:text-primary cursor-pointer transition-colors">VENTILATION</span>
+        <span class="hover:text-primary cursor-pointer transition-colors">AIR CONDITIONING</span>
+        <span class="hover:text-primary cursor-pointer transition-colors">MORE</span>
+      </nav>
+      <button
+        class="bg-black text-white px-5 py-3 rounded-full text-sm font-medium hover:bg-gray-800 hover:-translate-y-0.5 transition-all">
+        CALL NOW ↗
+      </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative p-8 md:p-10 overflow-hidden">
+      <p class="text-3xl text-gray-600 mb-8 font-light">
+        Discover the <span class="text-primary font-semibold">Signature</span> touch in-
+      </p>
+
+      <div class="relative z-10">
+        <h1 class="text-5xl md:text-8xl lg:text-[140px] font-black leading-[0.9] tracking-tight mb-5 ">PLUMBING</h1>
+        <h1 class="text-5xl md:text-8xl lg:text-[140px] font-black leading-[0.9] tracking-tight my-0">AND HVAC</h1>
+      </div>
+
+      <!-- Ribbons -->
+      <div
+        class="hidden md:flex items-center ribbon-clip absolute bg-primary/60 h-20 w-72 -rotate-15 top-44 -left-12 z-20 flex items-center justify-center text-white font-bold text-sm md:text-base uppercase tracking-wider shadow-ribbon">
+        <span>❄ FURNACE</span>
+      </div>
+      <div
+        class="ribbon-clip absolute bg-primary h-20 w-80 rotate-12 top-80 -right-20 z-20 flex items-center justify-center text-white font-bold text-sm md:text-base uppercase tracking-wider shadow-ribbon">
+        <span>💧 WATER HEATER 💧 UNDER 💧</span>
+      </div>
+      <div
+        class="ribbon-clip absolute bg-primary h-20 w-72 -rotate-8 top-[460px] left-12 z-20 flex items-center justify-center text-white font-bold text-sm md:text-base uppercase tracking-wider shadow-ribbon">
+        <span>🔥 AIR</span>
+      </div>
+
+      <!-- Decorative Elements -->
+      <div class="absolute text-gray-300 text-2xl z-10 top-48 left-24">❄</div>
+      <div class="absolute text-gray-300 text-2xl z-10 top-36 right-48">❄</div>
+      <div class="absolute text-gray-300 text-2xl z-10 bottom-48 left-36">❄</div>
+    </section>
+
+    <!-- Bottom Section -->
+    <section class="p-8 md:p-10 flex flex-col md:flex-row justify-between items-end relative z-30">
+      <p class="text-2xl text-gray-600 leading-relaxed font-light mb-8 md:mb-0 max-w-lg">
+        Where your comfort and satisfaction<br>
+        are our Priority. Your Trusted partner<br>
+        in Regina, Saskatchewan, Canada.
+      </p>
+
+      <div class="bg-dark text-white p-8 rounded-2xl relative min-w-[300px]">
+        <div class="absolute top-5 right-6 text-gray-300 text-xl cursor-pointer hover:text-white transition-colors">✕
+        </div>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+          We are just a<br>
+          phone call away-
+        </p>
+        <p class="text-3xl font-bold tracking-wider">(306) 529-3287</p>
+      </div>
+    </section>
+
+
+    <div class="max-w-6xl mx-auto">
+      <!-- Section heading -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 animate-float">
+          Our Professional Services
+        </h2>
+        <div class="w-24 h-1 bg-indigo-600 mx-auto"></div>
+      </div>
+
+      <!-- Services grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div
+          class="service-card bg-white rounded-xl shadow-md overflow-hidden opacity-0 animate-fade-in [animation-fill-mode:forwards]"
+          style="animation-delay: 0.2s">
+          <img
+            src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            alt="Service 1" class="w-full card-image">
+          <div class="p-6">
+            <div class="text-indigo-600 font-bold text-xl mb-4">LEAK DETECTION</div>
+            <p class="text-gray-600 mb-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed
+              erat molestie vehicula.
+            </p>
+            <a href="#" class="inline-flex items-center text-indigo-600 font-medium group">
+              READ MORE →
+              <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="service-card bg-white rounded-xl shadow-md overflow-hidden opacity-0 animate-fade-in [animation-fill-mode:forwards]"
+          style="animation-delay: 0.4s">
+          <img
+            src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            alt="Service 2" class="w-full card-image">
+          <div class="p-6">
+            <div class="text-indigo-600 font-bold text-xl mb-4">DRAIN SOLUTIONS</div>
+            <p class="text-gray-600 mb-6">
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco.
+            </p>
+            <a href="#" class="inline-flex items-center text-indigo-600 font-medium group">
+              READ MORE →
+              <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="service-card bg-white rounded-xl shadow-md overflow-hidden opacity-0 animate-fade-in [animation-fill-mode:forwards]"
+          style="animation-delay: 0.6s">
+          <img
+            src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            alt="Service 3" class="w-full card-image">
+          <div class="p-6">
+            <div class="text-indigo-600 font-bold text-xl mb-4">MAINTENANCE</div>
+            <p class="text-gray-600 mb-6">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat.
+            </p>
+            <a href="#" class="inline-flex items-center text-indigo-600 font-medium group">
+              READ MORE →
+              <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="p-8 md:p-12 bg-gray-50 text-center">
+      <div class="max-w-4xl mx-auto mb-12">
+        <h2 class="text-4xl md:text-5xl font-black leading-tight mb-6">We Deliver Total Heating, Cooling, and Plumbing
+          Services</h2>
+        <p class="text-xl text-gray-600 leading-relaxed mb-8">
+          From HVAC to plumbing, we cover all your home needs, ensuring comfort, efficiency, and security.
+        </p>
+        <a href="#"
+          class="text-primary text-lg font-semibold hover:text-primaryDark hover:-translate-y-0.5 transition-all inline-block">
+          Let's talk (306-529-3287) ↗
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
+        <!-- Service Cards -->
+        <div
+          class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center transition-all hover:border-primary hover:-translate-y-1 hover:shadow-card cursor-pointer flex flex-col items-center justify-center min-h-[140px]">
+          <div class="text-3xl mb-4">🔥</div>
+          <p class="text-xs font-semibold uppercase tracking-wide">FURNACE</p>
+        </div>
+        <div
+          class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center transition-all hover:border-primary hover:-translate-y-1 hover:shadow-card cursor-pointer flex flex-col items-center justify-center min-h-[140px]">
+          <div class="text-3xl mb-4">❄</div>
+          <p class="text-xs font-semibold uppercase tracking-wide">AIR CONDITIONING</p>
+        </div>
+        <div
+          class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center transition-all hover:border-primary hover:-translate-y-1 hover:shadow-card cursor-pointer flex flex-col items-center justify-center min-h-[140px]">
+          <div class="text-3xl mb-4">🚿</div>
+          <p class="text-xs font-semibold uppercase tracking-wide">WATER HEATER</p>
+        </div>
+        <div
+          class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center transition-all hover:border-primary hover:-translate-y-1 hover:shadow-card cursor-pointer flex flex-col items-center justify-center min-h-[140px]">
+          <div class="text-3xl mb-4">🏠</div>
+          <p class="text-xs font-semibold uppercase tracking-wide">GARAGE HEATER</p>
+        </div>
+        <div
+          class="bg-white border-2 border-primary rounded-xl p-6 text-center transition-all hover:-translate-y-1 hover:shadow-card cursor-pointer flex flex-col items-center justify-center min-h-[140px] bg-red-50">
+          <div class="text-3xl mb-4">🔧</div>
+          <p class="text-xs font-semibold uppercase tracking-wide">GAS LINE INSTALL</p>
+        </div>
+        <div
+          class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center transition-all hover:border-primary hover:-translate-y-1 hover:shadow-card cursor-pointer flex flex-col items-center justify-center min-h-[140px]">
+          <div class="text-3xl mb-4">💨</div>
+          <p class="text-xs font-semibold uppercase tracking-wide">AIR PURIFICATION</p>
+        </div>
+        <div
+          class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center transition-all hover:border-primary hover:-translate-y-1 hover:shadow-card cursor-pointer flex flex-col items-center justify-center min-h-[140px]">
+          <div class="text-3xl mb-4">🏡</div>
+          <p class="text-xs font-semibold uppercase tracking-wide leading-snug">NEW HOME PLUMBING & HVAC</p>
+        </div>
+        <div
+          class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center transition-all hover:border-primary hover:-translate-y-1 hover:shadow-card cursor-pointer flex flex-col items-center justify-center min-h-[140px]">
+          <div class="text-3xl mb-4">🔨</div>
+          <p class="text-xs font-semibold uppercase tracking-wide">PLUMBING RENOVATION</p>
+        </div>
+        <div
+          class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center transition-all hover:border-primary hover:-translate-y-1 hover:shadow-card cursor-pointer flex flex-col items-center justify-center min-h-[140px]">
+          <div class="text-3xl mb-4">🧽</div>
+          <p class="text-xs font-semibold uppercase tracking-wide leading-snug">SEWER AND DRAIN CLEANING</p>
+        </div>
+        <div
+          class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center transition-all hover:border-primary hover:-translate-y-1 hover:shadow-card cursor-pointer flex flex-col items-center justify-center min-h-[140px]">
+          <div class="text-3xl mb-4">🌡️</div>
+          <p class="text-xs font-semibold uppercase tracking-wide">UNDERFLOOR HEATING</p>
+        </div>
+        <div
+          class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center transition-all hover:border-primary hover:-translate-y-1 hover:shadow-card cursor-pointer flex flex-col items-center justify-center min-h-[140px]">
+          <div class="text-3xl mb-4">♻️</div>
+          <p class="text-xs font-semibold uppercase tracking-wide leading-snug">HEAT RECOVERY VENTILATOR (HRV)</p>
+        </div>
+        <div
+          class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center transition-all hover:border-primary hover:-translate-y-1 hover:shadow-card cursor-pointer flex flex-col items-center justify-center min-h-[140px]">
+          <div class="text-3xl mb-4">🍳</div>
+          <p class="text-xs font-semibold uppercase tracking-wide">KITCHEN RENOVATION</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <div class=" mx-auto text-center space-y-12 p-8 md:p-12 bg-gray-50">
+    <!-- Heading with animation -->
+    <div class="animate-float">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mt-6">
+        <span>Brand we trust for</span>
+        <span class="text-indigo-600">Reginas'</span>
+        <span>Homeowners</span>
+      </h2>
+    </div>
+
+    <!-- Logos grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <!-- Each logo item with staggered animation -->
+      <div class="logo-item opacity-0 animate-fade-in [animation-fill-mode:forwards]" style="animation-delay: 0.2s">
+        <div
+          class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow h-full flex items-center justify-center">
+          <span class="text-2xl font-bold text-gray-700">Ducane</span>
+        </div>
+      </div>
+
+      <div class="logo-item opacity-0 animate-fade-in [animation-fill-mode:forwards]" style="animation-delay: 0.4s">
+        <div
+          class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow h-full flex items-center justify-center">
+          <span class="text-2xl font-bold text-blue-600">AIREASE</span>
+        </div>
+      </div>
+
+      <div class="logo-item opacity-0 animate-fade-in [animation-fill-mode:forwards]" style="animation-delay: 0.6s">
+        <div
+          class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow h-full flex items-center justify-center">
+          <span class="text-2xl font-bold text-green-600">vim P.P.</span>
+        </div>
+      </div>
+
+      <div class="logo-item opacity-0 animate-fade-in [animation-fill-mode:forwards]" style="animation-delay: 0.8s">
+        <div
+          class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow h-full flex items-center justify-center">
+          <span class="text-2xl font-bold text-purple-600">MNAVEN</span>
+        </div>
+      </div>
+
+      <div class="logo-item opacity-0 animate-fade-in [animation-fill-mode:forwards]" style="animation-delay: 1.0s">
+        <div
+          class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow h-full flex items-center justify-center">
+          <span class="text-2xl font-bold text-red-500">Regin</span>
+        </div>
+      </div>
+
+      <div class="logo-item opacity-0 animate-fade-in [animation-fill-mode:forwards]" style="animation-delay: 1.2s">
+        <div
+          class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow h-full flex items-center justify-center">
+          <span class="text-2xl font-bold text-yellow-500">MODINE</span>
+        </div>
+      </div>
+
+      <div class="logo-item opacity-0 animate-fade-in [animation-fill-mode:forwards]" style="animation-delay: 1.4s">
+        <div
+          class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow h-full flex items-center justify-center">
+          <span class="text-2xl font-bold text-gray-800">John Wood</span>
+        </div>
+      </div>
+
+      <div class="logo-item opacity-0 animate-fade-in [animation-fill-mode:forwards]" style="animation-delay: 1.6s">
+        <div
+          class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow h-full flex items-center justify-center">
+          <span class="text-2xl font-bold text-teal-500">SANUVOX</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Testimonials Section -->
+  <section class="p-12 bg-primary text-white rounded-tl-3xl rounded-tr-3xl md:rounded-tl-[100px] md:rounded-tr-[100px]">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-sm uppercase tracking-wider mb-5 text-primary-100">HAPPY CUSTOMERS</p>
+      <h2 class="text-3xl md:text-4xl font-black leading-tight mb-8">What Our Clients Say</h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm">
+          <div class="text-2xl mb-4">"</div>
+          <p class="mb-6 leading-relaxed">Signature Plumbing saved us during a winter emergency. Their technician
+            arrived within an hour and fixed our furnace. Professional and courteous service!</p>
+          <p class="font-bold">— Sarah Johnson</p>
+        </div>
+        <div class="bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm">
+          <div class="text-2xl mb-4">"</div>
+          <p class="mb-6 leading-relaxed">The best plumbing service in Regina! They installed our new water heater
+            efficiently and cleaned up perfectly. Will definitely use them for all our home needs.</p>
+          <p class="font-bold">— Michael Chen</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- CTA Section -->
+  <section class="p-12 bg-dark text-white text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-black leading-tight mb-6">Ready to Experience the Signature Difference?
+      </h2>
+      <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+        Contact us today for reliable, professional service you can trust. Available 24/7 for emergencies.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="bg-primary hover:bg-primaryDark text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors">
+          CALL NOW (306) 529-3287
+        </button>
+        <button
+          class="bg-white hover:bg-gray-100 text-dark px-8 py-4 rounded-full text-lg font-semibold transition-colors">
+          EMAIL US
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="p-8 bg-gray-800 text-gray-300">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 bg-primary rounded-lg mr-3 flex items-center justify-center text-white font-bold">S
+          </div>
+          <div>
+            <div class="font-bold text-white">Signature</div>
+            <div class="text-sm">Plumbing & Heating</div>
+          </div>
+        </div>
+        <p class="text-sm mb-4">Your trusted partner for all plumbing and HVAC needs in Regina, Saskatchewan.</p>
+        <div class="flex gap-4">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">FB</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">IG</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">TW</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-white font-bold mb-4">Services</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white transition-colors text-sm">Plumbing</a></li>
+          <li><a href="#" class="hover:text-white transition-colors text-sm">Heating</a></li>
+          <li><a href="#" class="hover:text-white transition-colors text-sm">Cooling</a></li>
+          <li><a href="#" class="hover:text-white transition-colors text-sm">Ventilation</a></li>
+          <li><a href="#" class="hover:text-white transition-colors text-sm">Water Treatment</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-white font-bold mb-4">Company</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white transition-colors text-sm">About Us</a></li>
+          <li><a href="#" class="hover:text-white transition-colors text-sm">Our Team</a></li>
+          <li><a href="#" class="hover:text-white transition-colors text-sm">Testimonials</a></li>
+          <li><a href="#" class="hover:text-white transition-colors text-sm">Careers</a></li>
+          <li><a href="#" class="hover:text-white transition-colors text-sm">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-white font-bold mb-4">Contact</h3>
+        <address class="not-italic text-sm space-y-2">
+          <p>123 Service Road<br>Regina, SK S4P 3E2</p>
+          <p>Phone: (306) 529-3287</p>
+          <p>Email: info@signatureph.ca</p>
+          <p>24/7 Emergency Service</p>
+        </address>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-center text-gray-500">
+      <p>© 2023 Signature Plumbing & Heating. All rights reserved.</p>
+    </div>
+  </footer>
+  </div>
+</body>
+
+</html>
